@@ -17,7 +17,7 @@
   --accent: #5fb3ff;
   --accent-2: #a78bfa;
   --accent-warm: #f0a868;
-  --grelha: #5fb3ff;
+  --malha: #5fb3ff;
   --dna: #a78bfa;
   --tier-min: #f0a868;
   --tier-rec: #5fb3ff;
@@ -153,7 +153,7 @@ code {
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--grelha), var(--dna));
+  background: linear-gradient(135deg, var(--malha), var(--dna));
   color: #0a0e14;
   font-weight: 800;
   font-size: 1.1rem;
@@ -214,7 +214,7 @@ code {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--grelha), var(--dna));
+  background: linear-gradient(135deg, var(--malha), var(--dna));
   color: #0a0e14;
 }
 .btn--primary:hover {
@@ -278,7 +278,7 @@ code {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--grelha), var(--dna), var(--accent-warm));
+  background: linear-gradient(135deg, var(--malha), var(--dna), var(--accent-warm));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -479,8 +479,8 @@ code {
   border-color: var(--border-strong);
 }
 
-.app-card--grelha:hover {
-  border-color: var(--grelha);
+.app-card--malha:hover {
+  border-color: var(--malha);
 }
 .app-card--dna:hover {
   border-color: var(--dna);
@@ -497,11 +497,11 @@ code {
   margin-bottom: 1.5rem;
 }
 
-.app-card--grelha .app-card__icon {
+.app-card--malha .app-card__icon {
   background: rgba(95, 179, 255, 0.12);
 }
-.app-card--grelha .app-card__icon svg {
-  fill: var(--grelha);
+.app-card--malha .app-card__icon svg {
+  fill: var(--malha);
   width: 32px;
   height: 32px;
 }
@@ -656,7 +656,7 @@ code {
 }
 
 .hw-tab.is-active {
-  background: linear-gradient(135deg, var(--grelha), var(--dna));
+  background: linear-gradient(135deg, var(--malha), var(--dna));
   color: #0a0e14;
   border-color: transparent;
 }

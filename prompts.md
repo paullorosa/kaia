@@ -3,8 +3,8 @@
 Prompts de geração de imagens (Midjourney, DALL-E, Stable Diffusion, Flux) para substituir os placeholders visuais do site.
 
 **Brand colors:**
-- `#5fb3ff` — azul CaiaGrelha
-- `#a78bfa` — roxo CaiaDNA
+- `#5fb3ff` — azul KaiaMalha
+- `#a78bfa` — roxo KaiaDNA
 - `#f0a868` — laranja warm accent
 - `#0a0e14` — preto background
 - `#111721` — superfícies elevadas
@@ -43,9 +43,9 @@ Minimal, editorial, futuristic. No text, no UI elements.
 
 ---
 
-## 2. CaiaGrelha — App card icon/screenshot
+## 2. KaiaMalha — App card icon/screenshot
 
-**Localização:** `index.html` → `.app-card--grelha`
+**Localização:** `index.html` → `.app-card--malha`
 
 **Tamanho:** 800×500 px (16:10 ratio)
 
@@ -72,7 +72,7 @@ color #5fb3ff dominant. Suitable as a 200×200 app icon.
 
 ---
 
-## 3. CaiaDNA — App card icon/screenshot
+## 3. KaiaDNA — App card icon/screenshot
 
 **Localização:** `index.html` → `.app-card--dna`
 
@@ -225,8 +225,8 @@ Criar pasta:
 Kaia/
 └── images/
     ├── hero.webp           # 1
-    ├── caiagrelha.webp     # 2
-    ├── caiadna.webp        # 3
+    ├── kaiamalha.webp     # 2
+    ├── kaiadna.webp        # 3
     ├── features/
     │   ├── editor-2d.svg   # 4.1
     │   ├── render3d.svg    # 4.2

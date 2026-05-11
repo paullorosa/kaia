@@ -1,6 +1,6 @@
 # Kaia — landing page
 
-Site estático que apresenta o ecossistema Kaia (CaiaGrelha + CaiaDNA).
+Site estático que apresenta o ecossistema Kaia (KaiaMalha + KaiaDNA).
 
 ## Estrutura
 
@@ -35,6 +35,6 @@ Site estático sem build step — funciona em:
 
 ## Customizar
 
-- **Cores brand:** ver `:root` em `styles.css` — `--grelha`, `--dna`, `--accent`
+- **Cores brand:** ver `:root` em `styles.css` — `--malha`, `--dna`, `--accent`
 - **Tiers de hardware:** secção `#hardware` em `index.html`
 - **Links de download:** secção `#downloads` (placeholders `href="#"`)
