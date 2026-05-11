@@ -117,12 +117,12 @@ a 2D drawing tool: rectangles being snapped to a grid with cyan
 Clean line art with translucent fill. Minimal, technical.
 ```
 
-### 4.2 Render Babylon.js 9
+### 4.2 Render 3D em tempo real
 ```
 Isometric icon, 240×240, dark background. A small 3D scene rendered
-inside a transparent cube: a couple of geometric buildings with PBR
-materials, soft shadows, ambient occlusion. Cyan and purple accents.
-Represents real-time 3D rendering. Clean and minimal.
+inside a transparent cube: a couple of geometric buildings with
+realistic materials, soft shadows, ambient occlusion. Cyan and purple
+accents. Represents real-time 3D rendering. Clean and minimal.
 ```
 
 ### 4.3 Terreno + drenagem
@@ -133,7 +133,7 @@ top with subtle drainage channels on each side, water flowing.
 Orange (#f0a868) for the road surface. Educational diagram style.
 ```
 
-### 4.4 Export USDA
+### 4.4 Export universal
 ```
 Isometric icon, 240×240, dark background. A stylized 3D file icon
 with the letters "USD" on it, glowing in cyan. Three arrows point
@@ -229,9 +229,9 @@ Kaia/
     ├── caiadna.webp        # 3
     ├── features/
     │   ├── editor-2d.svg   # 4.1
-    │   ├── babylon.svg     # 4.2
+    │   ├── render3d.svg    # 4.2
     │   ├── terrain.svg     # 4.3
-    │   ├── usda.svg        # 4.4
+    │   ├── export.svg      # 4.4
     │   ├── dynamic.svg     # 4.5
     │   └── dna.svg         # 4.6
     ├── og-image.webp       # 5
