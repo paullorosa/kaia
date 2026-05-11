@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaia — Ferramentas para Cidades Procedurais</title>
+    <meta
+      name="description"
+      content="Kaia é o ecossistema de ferramentas para desenhar, parametrizar e gerar cidades procedurais. CaiaGrelha para a cidade, CaiaDNA para os prédios."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">
+          <span class="logo-mark">K</span>
+          <span class="logo-text">Kaia</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#hardware">Hardware</a></li>
+          <li><a href="#downloads">Downloads</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#downloads" class="btn btn--primary btn--sm">Descarregar</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow">Cidades procedurais · 2D → 3D</span>
+          <h1>
+            Desenha a cidade.<br />
+            Parametriza os prédios.<br />
+            <span class="gradient-text">Gera o mundo.</span>
+          </h1>
+          <p class="hero__lead">
+            Kaia é um ecossistema de duas ferramentas desktop que trabalham em
+            conjunto: <strong>CaiaGrelha</strong> para esculpir a cidade,
+            <strong>CaiaDNA</strong> para definir as regras dos prédios que a
+            habitam.
+          </p>
+          <div class="hero__cta">
+            <a href="#downloads" class="btn btn--primary">Começar</a>
+            <a href="#apps" class="btn btn--ghost">Ver as apps →</a>
+          </div>
+          <div class="hero__meta">
+            <span>Angular 20</span>
+            <span>·</span>
+            <span>Babylon.js 9</span>
+            <span>·</span>
+            <span>Electron 41</span>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="grid-stack">
+            <div class="grid-stack__layer layer--blocks"></div>
+            <div class="grid-stack__layer layer--roads"></div>
+            <div class="grid-stack__layer layer--trees"></div>
+            <div class="grid-stack__label">Maputo · proc. gen v1</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Apps section -->
+    <section id="apps" class="section">
+      <div class="section__header">
+        <span class="eyebrow">Duas apps · um pipeline</span>
+        <h2>Cidade e prédios, separados por uma razão.</h2>
+        <p class="lead">
+          Cada app faz uma coisa e fá-la bem. Trabalham em conjunto, mas podem
+          ser usadas de forma independente.
+        </p>
+      </div>
+      <div class="apps-grid">
+        <article class="app-card app-card--grelha">
+          <div class="app-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="4" y="4" width="14" height="14" rx="2" />
+              <rect x="22" y="4" width="14" height="14" rx="2" />
+              <rect x="4" y="22" width="14" height="14" rx="2" />
+              <rect x="22" y="22" width="14" height="14" rx="2" />
+            </svg>
+          </div>
+          <h3>CaiaGrelha</h3>
+          <p class="app-card__tag">Editor 2D → cidade 3D</p>
+          <p>
+            Desenha o layout da cidade em 2D — ruas, quarteirões, zonas — e o
+            CaiaGrelha extrude tudo em 3D com terreno, calçadas, drenagem
+            urbana e árvores.
+          </p>
+          <ul class="app-card__features">
+            <li>Editor 2D com snap-to-grid + spline</li>
+            <li>Geração 3D Babylon.js (PBR, LOD, octree)</li>
+            <li>Export USDA para Blender/Unreal</li>
+            <li>Heightmap + snap-to-terrain</li>
+          </ul>
+          <a href="#downloads" class="link-arrow">Descarregar CaiaGrelha →</a>
+        </article>
+
+        <article class="app-card app-card--dna">
+          <div class="app-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M10 4 Q20 12 30 4 M10 14 Q20 22 30 14 M10 24 Q20 32 30 24 M10 34 Q20 42 30 34" />
+              <line x1="14" y1="9" x2="14" y2="29" />
+              <line x1="26" y1="9" x2="26" y2="29" />
+            </svg>
+          </div>
+          <h3>CaiaDNA</h3>
+          <p class="app-card__tag">Regras dos prédios</p>
+          <p>
+            Define a geometria, parametrização e regras de validação dos
+            prédios que vão povoar a cidade. Um prédio de cada vez, com
+            inspector, asset manager e renderer de referência.
+          </p>
+          <ul class="app-card__features">
+            <li>Rule editor com validação</li>
+            <li>Building inspector + asset manager</li>
+            <li>Reference renderer (preview 3D)</li>
+            <li>Templates partilháveis com o CaiaGrelha</li>
+          </ul>
+          <a href="#downloads" class="link-arrow">Descarregar CaiaDNA →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section section--alt">
+      <div class="section__header">
+        <span class="eyebrow">Features</span>
+        <h2>Pensado para iteração rápida.</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature__icon">2D</div>
+          <h3>Editor 2D estruturado</h3>
+          <p>
+            Paper.js + clipper-lib para operações booleanas, snap-to-grid,
+            fillet, offset. Cada decisão 2D propaga-se ao 3D sem manualidade.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">3D</div>
+          <h3>Render Babylon.js 9</h3>
+          <p>
+            PBR, instâncias, LOD, octree e MergeMeshes por camada. Cenas tipo
+            Maputo correm a 60 FPS em hardware moderno.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">⛰️</div>
+          <h3>Terreno + drenagem</h3>
+          <p>
+            Heightmap real, snap-to-terrain via raycast, perfis de rua com
+            canais laterais. A cidade adapta-se ao terreno, não o contrário.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">USD</div>
+          <h3>Export USDA</h3>
+          <p>
+            Sai directo para Blender, Unreal e Maya em formato Pixar USD.
+            Materiais PBR preservados.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">⚙️</div>
+          <h3>Configuração dinâmica</h3>
+          <p>
+            Sliders 3D em settings para ajustar densidade de árvores,
+            semáforos, drenagem. Tweak em tempo real sem rebuild.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🧬</div>
+          <h3>DNA partilhado</h3>
+          <p>
+            Templates de prédios criados no CaiaDNA carregam directamente no
+            CaiaGrelha. Um único source-of-truth para as regras.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hardware -->
+    <section id="hardware" class="section">
+      <div class="section__header">
+        <span class="eyebrow">Requisitos de hardware</span>
+        <h2>Que PC precisas?</h2>
+        <p class="lead">
+          Três tiers por aplicação. Se usares ambas, dimensiona pelo CaiaGrelha
+          — é o limitador.
+        </p>
+      </div>
+
+      <div class="hw-tabs" role="tablist">
+        <button
+          class="hw-tab is-active"
+          role="tab"
+          data-target="hw-grelha"
+          aria-selected="true"
+        >
+          CaiaGrelha
+        </button>
+        <button class="hw-tab" role="tab" data-target="hw-dna" aria-selected="false">
+          CaiaDNA
+        </button>
+      </div>
+
+      <div id="hw-grelha" class="hw-panel is-active" role="tabpanel">
+        <div class="hw-tiers">
+          <div class="hw-tier hw-tier--min">
+            <div class="hw-tier__badge">Mínimo</div>
+            <h3>Funciona, mas sente-se</h3>
+            <ul>
+              <li><strong>CPU</strong> Intel i5 8ª gen / Ryzen 5 2600</li>
+              <li><strong>RAM</strong> 8 GB DDR4</li>
+              <li><strong>GPU</strong> Iris Xe / Vega 8 / Apple M1</li>
+              <li><strong>Disco</strong> SSD 256 GB</li>
+              <li><strong>Ecrã</strong> 1080p</li>
+            </ul>
+            <p class="hw-tier__note">
+              Cenas com <code>Trees: dense</code> dão drops de FPS.
+            </p>
+          </div>
+          <div class="hw-tier hw-tier--rec">
+            <div class="hw-tier__badge">Recomendado</div>
+            <h3>Experiência fluída</h3>
+            <ul>
+              <li><strong>CPU</strong> Intel i7 12ª gen / Ryzen 7 5700X / M2</li>
+              <li><strong>RAM</strong> 16 GB DDR4/DDR5</li>
+              <li><strong>GPU</strong> RTX 3050/4050 ou RX 6600 (4+ GB VRAM)</li>
+              <li><strong>Disco</strong> SSD NVMe 512 GB</li>
+              <li><strong>Ecrã</strong> 1440p ou dual-monitor</li>
+            </ul>
+            <p class="hw-tier__note">
+              Sweet spot: deixas de ter swap, viewport fluído.
+            </p>
+          </div>
+          <div class="hw-tier hw-tier--ideal">
+            <div class="hw-tier__badge">Ideal</div>
+            <h3>Maputo full-detail</h3>
+            <ul>
+              <li><strong>CPU</strong> i7/i9 13ª-14ª gen, Ryzen 7/9 7000, M3 Pro/Max</li>
+              <li><strong>RAM</strong> 32 GB</li>
+              <li><strong>GPU</strong> RTX 4060/4070+ com 8+ GB VRAM</li>
+              <li><strong>Disco</strong> SSD NVMe 1 TB</li>
+              <li><strong>Ecrã</strong> 1440p / 4K</li>
+            </ul>
+            <p class="hw-tier__note">
+              Cidades grandes, floresta densa, sem compromissos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="hw-dna" class="hw-panel" role="tabpanel">
+        <div class="hw-tiers">
+          <div class="hw-tier hw-tier--min">
+            <div class="hw-tier__badge">Mínimo</div>
+            <h3>Templates simples</h3>
+            <ul>
+              <li><strong>CPU</strong> Intel i3 10ª gen / Ryzen 3 3200</li>
+              <li><strong>RAM</strong> 8 GB DDR4</li>
+              <li><strong>GPU</strong> UHD 620+ / Vega 3+ / Apple M1</li>
+              <li><strong>Disco</strong> SSD 256 GB</li>
+              <li><strong>Ecrã</strong> 1080p</li>
+            </ul>
+            <p class="hw-tier__note">
+              Validar e visualizar templates já existentes.
+            </p>
+          </div>
+          <div class="hw-tier hw-tier--rec">
+            <div class="hw-tier__badge">Recomendado</div>
+            <h3>Trabalho diário</h3>
+            <ul>
+              <li><strong>CPU</strong> Intel i5 12ª gen / Ryzen 5 5600 / M2</li>
+              <li><strong>RAM</strong> 16 GB DDR4/DDR5</li>
+              <li><strong>GPU</strong> Integrada moderna (Iris Xe / 680M)</li>
+              <li><strong>Disco</strong> SSD NVMe 512 GB</li>
+              <li><strong>Ecrã</strong> 1440p ou dual-monitor</li>
+            </ul>
+            <p class="hw-tier__note">
+              Editar regras + asset manager activo sem fricção.
+            </p>
+          </div>
+          <div class="hw-tier hw-tier--ideal">
+            <div class="hw-tier__badge">Ideal</div>
+            <h3>Library grande</h3>
+            <ul>
+              <li><strong>CPU</strong> i7 13ª gen / Ryzen 7 7700+ / M3</li>
+              <li><strong>RAM</strong> 32 GB</li>
+              <li><strong>GPU</strong> RTX 3050/4050 (≥ 4 GB VRAM)</li>
+              <li><strong>Disco</strong> SSD NVMe 1 TB</li>
+              <li><strong>Ecrã</strong> 1440p / 4K</li>
+            </ul>
+            <p class="hw-tier__note">
+              Iteração intensiva com ambas as apps abertas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hw-callout">
+        <div class="hw-callout__icon">💡</div>
+        <div>
+          <strong>RAM é o factor mais sensível.</strong> Electron + Chromium +
+          Babylon.js consomem facilmente 2–4 GB sozinhos. 16 GB é o ponto onde
+          deixas de ter swap.
+        </div>
+      </div>
+    </section>
+
+    <!-- Downloads -->
+    <section id="downloads" class="section section--alt">
+      <div class="section__header">
+        <span class="eyebrow">Downloads</span>
+        <h2>Disponível para Windows, macOS e Linux.</h2>
+        <p class="lead">
+          Ambas as apps são empacotadas com Electron. Plataformas testadas:
+          Windows 11 e macOS (Apple Silicon).
+        </p>
+      </div>
+      <div class="dl-grid">
+        <div class="dl-card">
+          <h3>CaiaGrelha</h3>
+          <p class="dl-card__version">v0.0 · em desenvolvimento</p>
+          <div class="dl-buttons">
+            <a class="btn btn--primary btn--block" href="#">Windows · .exe</a>
+            <a class="btn btn--outline btn--block" href="#">macOS · .dmg</a>
+            <a class="btn btn--outline btn--block" href="#">Linux · .AppImage</a>
+          </div>
+        </div>
+        <div class="dl-card">
+          <h3>CaiaDNA</h3>
+          <p class="dl-card__version">v0.0 · em desenvolvimento</p>
+          <div class="dl-buttons">
+            <a class="btn btn--primary btn--block" href="#">Windows · .exe</a>
+            <a class="btn btn--outline btn--block" href="#">macOS · .dmg</a>
+            <a class="btn btn--outline btn--block" href="#">Linux · .AppImage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="section__header">
+        <span class="eyebrow">FAQ</span>
+        <h2>Perguntas frequentes.</h2>
+      </div>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>Tenho que usar as duas apps?</summary>
+          <p>
+            Não. O CaiaGrelha funciona com templates de prédio default e
+            consegues desenhar uma cidade inteira sem nunca abrir o CaiaDNA. O
+            CaiaDNA é para quem quer criar regras de prédios personalizadas.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>Que formatos de export estão suportados?</summary>
+          <p>
+            CaiaGrelha exporta <strong>USDA</strong> (Pixar USD), que carrega
+            directo no Blender, Unreal Engine e Maya. Materiais PBR são
+            preservados.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>Posso correr em GPU integrada?</summary>
+          <p>
+            Sim. Intel Iris Xe, AMD Radeon 680M e Apple Silicon (M1/M2/M3)
+            correm muito bem o CaiaDNA e cenas pequenas do CaiaGrelha. Para
+            cidades grandes recomenda-se GPU dedicada.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>O ficheiro USDA está enorme. O que faço?</summary>
+          <p>
+            Reduz a densidade de árvores: <code>Inspector → 3D View → Trees:
+            Sparse</code> ou <code>Off</code>. Também podes desactivar
+            <code>Show traffic lights</code> se não precisares.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary>Há suporte para Linux?</summary>
+          <p>
+            Tecnicamente sim — o stack é Electron e funciona em Linux. Mas
+            ainda não validámos oficialmente. Reports de bugs são bem-vindos.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="logo-mark">K</span>
+          <span>Kaia</span>
+        </div>
+        <p>Ferramentas para desenhar, parametrizar e gerar cidades procedurais.</p>
+        <div class="footer__meta">
+          © 2026 · Kaia Project · Made with Angular, Babylon.js & Electron
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
