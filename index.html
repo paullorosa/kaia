@@ -8,6 +8,7 @@
       name="description"
       content="Kaia é o ecossistema de ferramentas para desenhar, parametrizar e gerar cidades procedurais. KaiaMalha para a cidade, KaiaDNA para os prédios."
     />
+    <link rel="icon" type="image/svg+xml" href="assets/kaia-ico.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +22,7 @@
     <nav class="nav">
       <div class="nav__inner">
         <a href="#" class="nav__logo">
-          <span class="logo-mark">K</span>
+          <img src="assets/kaia-ico.svg" alt="" class="logo-mark logo-mark--img" aria-hidden="true" />
           <span class="logo-text">Kaia</span>
         </a>
         <ul class="nav__links">
@@ -86,15 +87,8 @@
       </div>
       <div class="apps-grid">
         <article class="app-card app-card--malha">
-          <div class="app-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none">
-              <rect x="4" y="4" width="14" height="14" rx="2" />
-              <rect x="22" y="4" width="14" height="14" rx="2" />
-              <rect x="4" y="22" width="14" height="14" rx="2" />
-              <rect x="22" y="22" width="14" height="14" rx="2" />
-            </svg>
-          </div>
-          <h3>KaiaMalha</h3>
+          <img src="assets/kaia-malha.svg" alt="KaiaMalha" class="app-card__brand" />
+          <h3 class="visually-hidden">KaiaMalha</h3>
           <p class="app-card__tag">Editor 2D → cidade 3D</p>
           <p>
             Desenha o layout da cidade em 2D — ruas, quarteirões, zonas — e o
@@ -111,14 +105,8 @@
         </article>
 
         <article class="app-card app-card--dna">
-          <div class="app-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none">
-              <path d="M10 4 Q20 12 30 4 M10 14 Q20 22 30 14 M10 24 Q20 32 30 24 M10 34 Q20 42 30 34" />
-              <line x1="14" y1="9" x2="14" y2="29" />
-              <line x1="26" y1="9" x2="26" y2="29" />
-            </svg>
-          </div>
-          <h3>KaiaDNA</h3>
+          <img src="assets/kaia-dna.svg" alt="KaiaDNA" class="app-card__brand" />
+          <h3 class="visually-hidden">KaiaDNA</h3>
           <p class="app-card__tag">Regras dos prédios</p>
           <p>
             Define a geometria, parametrização e regras de validação dos
@@ -409,7 +397,7 @@
     <footer class="footer">
       <div class="footer__inner">
         <div class="footer__brand">
-          <span class="logo-mark">K</span>
+          <img src="assets/kaia-ico.svg" alt="" class="logo-mark logo-mark--img" aria-hidden="true" />
           <span>Kaia</span>
         </div>
         <p>Ferramentas para desenhar, parametrizar e gerar cidades procedurais.</p>
