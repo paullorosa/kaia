@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="pt">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaia — Ferramentas para Cidades Procedurais</title>
+    <title>Kaia — Tools for Procedural Cities</title>
     <meta
       name="description"
-      content="Kaia é o ecossistema de ferramentas para desenhar, parametrizar e gerar cidades procedurais. KaiaMalha para a cidade, KaiaDNA para os prédios."
+      content="Kaia is the toolkit to sketch, parametrise and generate procedural cities. KaiaMalha for the city, KaiaDNA for the buildings."
     />
     <link rel="icon" type="image/svg+xml" href="assets/kaia-ico.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,13 +26,26 @@
           <span class="logo-text">Kaia</span>
         </a>
         <ul class="nav__links">
-          <li><a href="#apps">Apps</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#hardware">Hardware</a></li>
-          <li><a href="#downloads">Downloads</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#apps" data-i18n="nav-apps">Apps</a></li>
+          <li><a href="#features" data-i18n="nav-features">Features</a></li>
+          <li><a href="#hardware" data-i18n="nav-hardware">Hardware</a></li>
+          <li><a href="#pricing" data-i18n="nav-pricing">Pricing</a></li>
+          <li><a href="#downloads" data-i18n="nav-downloads">Downloads</a></li>
+          <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
         </ul>
-        <a href="#downloads" class="btn btn--primary btn--sm">Descarregar</a>
+        <div class="nav__toggles">
+          <button id="cur-toggle" class="pill-toggle" type="button" aria-label="Switch currency">
+            <span class="cur-eur">€</span>
+            <span class="pill-sep">/</span>
+            <span class="cur-usd">$</span>
+          </button>
+          <button id="lang-toggle" class="pill-toggle lang-toggle" type="button" aria-label="Switch language">
+            <span class="lang-pt">PT</span>
+            <span class="pill-sep">/</span>
+            <span class="lang-en">EN</span>
+          </button>
+        </div>
+        <a href="#downloads" class="btn btn--primary btn--sm" data-i18n="nav-cta">Download</a>
       </div>
     </nav>
 
@@ -40,21 +53,21 @@
     <header class="hero">
       <div class="hero__inner">
         <div class="hero__copy">
-          <span class="eyebrow">Cidades procedurais · 2D → 3D</span>
-          <h1>
-            Desenha a cidade.<br />
-            Parametriza os prédios.<br />
-            <span class="gradient-text">Gera o mundo.</span>
+          <span class="eyebrow" data-i18n="hero-eyebrow">Procedural cities · 2D → 3D</span>
+          <h1 data-i18n="hero-h1">
+            Sketch the city.<br />
+            Parametrise the buildings.<br />
+            <span class="gradient-text">Generate the world.</span>
           </h1>
-          <p class="hero__lead">
-            Kaia é um ecossistema de duas ferramentas desktop que trabalham em
-            conjunto: <strong>KaiaMalha</strong> para esculpir a cidade,
-            <strong>KaiaDNA</strong> para definir as regras dos prédios que a
-            habitam.
+          <p class="hero__lead" data-i18n="hero-lead">
+            Kaia is an ecosystem of two desktop tools that work together:
+            <strong>KaiaMalha</strong> to shape the city,
+            <strong>KaiaDNA</strong> to define the rules of the buildings that
+            fill it.
           </p>
           <div class="hero__cta">
-            <a href="#downloads" class="btn btn--primary">Começar</a>
-            <a href="#apps" class="btn btn--ghost">Ver as apps →</a>
+            <a href="#downloads" class="btn btn--primary" data-i18n="hero-cta-start">Get started</a>
+            <a href="#apps" class="btn btn--ghost" data-i18n="hero-cta-apps">See the apps →</a>
           </div>
           <div class="hero__meta">
             <span>Windows</span>
@@ -78,48 +91,48 @@
     <!-- Apps section -->
     <section id="apps" class="section">
       <div class="section__header">
-        <span class="eyebrow">Duas apps · um pipeline</span>
-        <h2>Cidade e prédios, separados por uma razão.</h2>
-        <p class="lead">
-          Cada app faz uma coisa e fá-la bem. Trabalham em conjunto, mas podem
-          ser usadas de forma independente.
+        <span class="eyebrow" data-i18n="apps-eyebrow">Two apps · one pipeline</span>
+        <h2 data-i18n="apps-h2">City and buildings, split by design.</h2>
+        <p class="lead" data-i18n="apps-lead">
+          Each app does one thing and does it well. They work together, but
+          can also be used independently.
         </p>
       </div>
       <div class="apps-grid">
         <article class="app-card app-card--malha">
           <img src="assets/kaia-malha.svg" alt="KaiaMalha" class="app-card__brand" />
           <h3 class="visually-hidden">KaiaMalha</h3>
-          <p class="app-card__tag">Editor 2D → cidade 3D</p>
-          <p>
-            Desenha o layout da cidade em 2D — ruas, quarteirões, zonas — e o
-            KaiaMalha extrude tudo em 3D com terreno, calçadas, drenagem
-            urbana e árvores.
+          <p class="app-card__tag" data-i18n="malha-tag">2D editor → 3D city</p>
+          <p data-i18n="malha-desc">
+            Sketch the city layout in 2D — streets, blocks, zones — and
+            KaiaMalha extrudes everything in 3D with terrain, sidewalks,
+            urban drainage and trees.
           </p>
           <ul class="app-card__features">
-            <li>Editor 2D com snap-to-grid + spline</li>
-            <li>Geração 3D realista com optimização automática</li>
-            <li>Export universal para Blender, Unreal e Maya</li>
-            <li>Adaptação automática ao terreno</li>
+            <li data-i18n="malha-f1">2D editor with snap-to-grid + spline</li>
+            <li data-i18n="malha-f2">Realistic 3D generation with automatic optimisation</li>
+            <li data-i18n="malha-f3">Universal export to Blender, Unreal and Maya</li>
+            <li data-i18n="malha-f4">Automatic terrain adaptation</li>
           </ul>
-          <a href="#downloads" class="link-arrow">Descarregar KaiaMalha →</a>
+          <a href="#downloads" class="link-arrow" data-i18n="malha-cta">Download KaiaMalha →</a>
         </article>
 
         <article class="app-card app-card--dna">
           <img src="assets/kaia-dna.svg" alt="KaiaDNA" class="app-card__brand" />
           <h3 class="visually-hidden">KaiaDNA</h3>
-          <p class="app-card__tag">Regras dos prédios</p>
-          <p>
-            Define a geometria, parametrização e regras de validação dos
-            prédios que vão povoar a cidade. Um prédio de cada vez, com
-            inspector, asset manager e renderer de referência.
+          <p class="app-card__tag" data-i18n="dna-tag">Building rules</p>
+          <p data-i18n="dna-desc">
+            Define the geometry, parameters and validation rules for the
+            buildings that populate the city. One building at a time, with
+            inspector, asset manager and reference renderer.
           </p>
           <ul class="app-card__features">
-            <li>Rule editor com validação</li>
-            <li>Building inspector + asset manager</li>
-            <li>Reference renderer (preview 3D)</li>
-            <li>Templates partilháveis com o KaiaMalha</li>
+            <li data-i18n="dna-f1">Rule editor with validation</li>
+            <li data-i18n="dna-f2">Building inspector + asset manager</li>
+            <li data-i18n="dna-f3">Reference renderer (3D preview)</li>
+            <li data-i18n="dna-f4">Templates shareable with KaiaMalha</li>
           </ul>
-          <a href="#downloads" class="link-arrow">Descarregar KaiaDNA →</a>
+          <a href="#downloads" class="link-arrow" data-i18n="dna-cta">Download KaiaDNA →</a>
         </article>
       </div>
     </section>
@@ -127,58 +140,59 @@
     <!-- Features -->
     <section id="features" class="section section--alt">
       <div class="section__header">
-        <span class="eyebrow">Features</span>
-        <h2>Pensado para iteração rápida.</h2>
+        <span class="eyebrow" data-i18n="feat-eyebrow">Features</span>
+        <h2 data-i18n="feat-h2">Designed for fast iteration.</h2>
       </div>
       <div class="features-grid">
         <div class="feature">
           <div class="feature__icon">2D</div>
-          <h3>Editor 2D estruturado</h3>
-          <p>
-            Desenha ruas e quarteirões com snap-to-grid, fillet e operações
-            geométricas precisas. Cada decisão 2D propaga-se ao 3D sem
-            trabalho manual.
+          <h3 data-i18n="feat-1-title">Structured 2D editor</h3>
+          <p data-i18n="feat-1-desc">
+            Draw streets and blocks with snap-to-grid, fillets and precise
+            geometric operations. Every 2D decision propagates to 3D with no
+            manual work.
           </p>
         </div>
         <div class="feature">
           <div class="feature__icon">3D</div>
-          <h3>Render 3D em tempo real</h3>
-          <p>
-            Materiais realistas, sombras suaves e cenas de cidade completa a
-            60 FPS em hardware moderno. Inspecciona ao detalhe sem esperar
+          <h3 data-i18n="feat-2-title">Real-time 3D render</h3>
+          <p data-i18n="feat-2-desc">
+            Realistic materials, soft shadows and full city scenes at 60 FPS
+            on modern hardware. Inspect every detail without waiting for
             renders.
           </p>
         </div>
         <div class="feature">
           <div class="feature__icon">⛰️</div>
-          <h3>Terreno + drenagem</h3>
-          <p>
-            Terreno real, ruas que assentam no relevo e perfis com canais
-            laterais. A cidade adapta-se ao terreno, não o contrário.
+          <h3 data-i18n="feat-3-title">Terrain + drainage</h3>
+          <p data-i18n="feat-3-desc">
+            Real terrain, streets that conform to relief, profiles with side
+            channels. The city adapts to the terrain, not the other way
+            around.
           </p>
         </div>
         <div class="feature">
           <div class="feature__icon">USD</div>
-          <h3>Export universal</h3>
-          <p>
-            Exporta para Blender, Unreal Engine e Maya num formato standard
-            da indústria. Materiais e geometria preservados.
+          <h3 data-i18n="feat-4-title">Universal export</h3>
+          <p data-i18n="feat-4-desc">
+            Export to Blender, Unreal Engine and Maya in an industry-standard
+            format. Materials and geometry preserved.
           </p>
         </div>
         <div class="feature">
           <div class="feature__icon">⚙️</div>
-          <h3>Configuração dinâmica</h3>
-          <p>
-            Sliders 3D em settings para ajustar densidade de árvores,
-            semáforos, drenagem. Tweak em tempo real sem rebuild.
+          <h3 data-i18n="feat-5-title">Dynamic configuration</h3>
+          <p data-i18n="feat-5-desc">
+            3D sliders in settings to tune tree density, traffic lights,
+            drainage. Live tweaking with no rebuild.
           </p>
         </div>
         <div class="feature">
           <div class="feature__icon">🧬</div>
-          <h3>DNA partilhado</h3>
-          <p>
-            Templates de prédios criados no KaiaDNA carregam directamente no
-            KaiaMalha. Um único source-of-truth para as regras.
+          <h3 data-i18n="feat-6-title">Shared DNA</h3>
+          <p data-i18n="feat-6-desc">
+            Building templates created in KaiaDNA load directly in KaiaMalha.
+            A single source of truth for the rules.
           </p>
         </div>
       </div>
@@ -187,11 +201,11 @@
     <!-- Hardware -->
     <section id="hardware" class="section">
       <div class="section__header">
-        <span class="eyebrow">Requisitos de hardware</span>
-        <h2>Que PC precisas?</h2>
-        <p class="lead">
-          Três tiers por aplicação. Se usares ambas, dimensiona pelo KaiaMalha
-          — é o limitador.
+        <span class="eyebrow" data-i18n="hw-eyebrow">Hardware requirements</span>
+        <h2 data-i18n="hw-h2">What PC do you need?</h2>
+        <p class="lead" data-i18n="hw-lead">
+          Three tiers per app. If you use both, size for KaiaMalha — it's
+          the limiter.
         </p>
       </div>
 
@@ -212,45 +226,45 @@
       <div id="hw-malha" class="hw-panel is-active" role="tabpanel">
         <div class="hw-tiers">
           <div class="hw-tier hw-tier--min">
-            <div class="hw-tier__badge">Mínimo</div>
-            <h3>Funciona, mas sente-se</h3>
+            <div class="hw-tier__badge" data-i18n="tier-min">Minimum</div>
+            <h3 data-i18n="hw-malha-min-h3">Works, but you'll feel it</h3>
             <ul>
-              <li><strong>CPU</strong> Intel i5 8ª gen / Ryzen 5 2600</li>
+              <li><strong>CPU</strong> Intel i5 8th gen / Ryzen 5 2600</li>
               <li><strong>RAM</strong> 8 GB DDR4</li>
               <li><strong>GPU</strong> Iris Xe / Vega 8 / Apple M1</li>
-              <li><strong>Disco</strong> SSD 256 GB</li>
-              <li><strong>Ecrã</strong> 1080p</li>
+              <li><strong>Disk</strong> SSD 256 GB</li>
+              <li><strong>Display</strong> 1080p</li>
             </ul>
-            <p class="hw-tier__note">
-              Cenas com <code>Trees: dense</code> dão drops de FPS.
+            <p class="hw-tier__note" data-i18n="hw-malha-min-note">
+              Scenes with <code>Trees: dense</code> cause FPS drops.
             </p>
           </div>
           <div class="hw-tier hw-tier--rec">
-            <div class="hw-tier__badge">Recomendado</div>
-            <h3>Experiência fluída</h3>
+            <div class="hw-tier__badge" data-i18n="tier-rec">Recommended</div>
+            <h3 data-i18n="hw-malha-rec-h3">Smooth experience</h3>
             <ul>
-              <li><strong>CPU</strong> Intel i7 12ª gen / Ryzen 7 5700X / M2</li>
+              <li><strong>CPU</strong> Intel i7 12th gen / Ryzen 7 5700X / M2</li>
               <li><strong>RAM</strong> 16 GB DDR4/DDR5</li>
-              <li><strong>GPU</strong> RTX 3050/4050 ou RX 6600 (4+ GB VRAM)</li>
-              <li><strong>Disco</strong> SSD NVMe 512 GB</li>
-              <li><strong>Ecrã</strong> 1440p ou dual-monitor</li>
+              <li><strong>GPU</strong> RTX 3050/4050 or RX 6600 (4+ GB VRAM)</li>
+              <li><strong>Disk</strong> SSD NVMe 512 GB</li>
+              <li><strong>Display</strong> 1440p or dual-monitor</li>
             </ul>
-            <p class="hw-tier__note">
-              Sweet spot: deixas de ter swap, viewport fluído.
+            <p class="hw-tier__note" data-i18n="hw-malha-rec-note">
+              Sweet spot: no more swap, fluid viewport.
             </p>
           </div>
           <div class="hw-tier hw-tier--ideal">
-            <div class="hw-tier__badge">Ideal</div>
-            <h3>Maputo full-detail</h3>
+            <div class="hw-tier__badge" data-i18n="tier-ideal">Ideal</div>
+            <h3 data-i18n="hw-malha-ideal-h3">Maputo full-detail</h3>
             <ul>
-              <li><strong>CPU</strong> i7/i9 13ª-14ª gen, Ryzen 7/9 7000, M3 Pro/Max</li>
+              <li><strong>CPU</strong> i7/i9 13th-14th gen, Ryzen 7/9 7000, M3 Pro/Max</li>
               <li><strong>RAM</strong> 32 GB</li>
-              <li><strong>GPU</strong> RTX 4060/4070+ com 8+ GB VRAM</li>
-              <li><strong>Disco</strong> SSD NVMe 1 TB</li>
-              <li><strong>Ecrã</strong> 1440p / 4K</li>
+              <li><strong>GPU</strong> RTX 4060/4070+ with 8+ GB VRAM</li>
+              <li><strong>Disk</strong> SSD NVMe 1 TB</li>
+              <li><strong>Display</strong> 1440p / 4K</li>
             </ul>
-            <p class="hw-tier__note">
-              Cidades grandes, floresta densa, sem compromissos.
+            <p class="hw-tier__note" data-i18n="hw-malha-ideal-note">
+              Large cities, dense forest, no compromises.
             </p>
           </div>
         </div>
@@ -259,45 +273,45 @@
       <div id="hw-dna" class="hw-panel" role="tabpanel">
         <div class="hw-tiers">
           <div class="hw-tier hw-tier--min">
-            <div class="hw-tier__badge">Mínimo</div>
-            <h3>Templates simples</h3>
+            <div class="hw-tier__badge" data-i18n="tier-min">Minimum</div>
+            <h3 data-i18n="hw-dna-min-h3">Simple templates</h3>
             <ul>
-              <li><strong>CPU</strong> Intel i3 10ª gen / Ryzen 3 3200</li>
+              <li><strong>CPU</strong> Intel i3 10th gen / Ryzen 3 3200</li>
               <li><strong>RAM</strong> 8 GB DDR4</li>
               <li><strong>GPU</strong> UHD 620+ / Vega 3+ / Apple M1</li>
-              <li><strong>Disco</strong> SSD 256 GB</li>
-              <li><strong>Ecrã</strong> 1080p</li>
+              <li><strong>Disk</strong> SSD 256 GB</li>
+              <li><strong>Display</strong> 1080p</li>
             </ul>
-            <p class="hw-tier__note">
-              Validar e visualizar templates já existentes.
+            <p class="hw-tier__note" data-i18n="hw-dna-min-note">
+              Validate and preview existing templates.
             </p>
           </div>
           <div class="hw-tier hw-tier--rec">
-            <div class="hw-tier__badge">Recomendado</div>
-            <h3>Trabalho diário</h3>
+            <div class="hw-tier__badge" data-i18n="tier-rec">Recommended</div>
+            <h3 data-i18n="hw-dna-rec-h3">Daily work</h3>
             <ul>
-              <li><strong>CPU</strong> Intel i5 12ª gen / Ryzen 5 5600 / M2</li>
+              <li><strong>CPU</strong> Intel i5 12th gen / Ryzen 5 5600 / M2</li>
               <li><strong>RAM</strong> 16 GB DDR4/DDR5</li>
-              <li><strong>GPU</strong> Integrada moderna (Iris Xe / 680M)</li>
-              <li><strong>Disco</strong> SSD NVMe 512 GB</li>
-              <li><strong>Ecrã</strong> 1440p ou dual-monitor</li>
+              <li><strong>GPU</strong> Modern integrated (Iris Xe / 680M)</li>
+              <li><strong>Disk</strong> SSD NVMe 512 GB</li>
+              <li><strong>Display</strong> 1440p or dual-monitor</li>
             </ul>
-            <p class="hw-tier__note">
-              Editar regras + asset manager activo sem fricção.
+            <p class="hw-tier__note" data-i18n="hw-dna-rec-note">
+              Edit rules + asset manager open without friction.
             </p>
           </div>
           <div class="hw-tier hw-tier--ideal">
-            <div class="hw-tier__badge">Ideal</div>
-            <h3>Library grande</h3>
+            <div class="hw-tier__badge" data-i18n="tier-ideal">Ideal</div>
+            <h3 data-i18n="hw-dna-ideal-h3">Large library</h3>
             <ul>
-              <li><strong>CPU</strong> i7 13ª gen / Ryzen 7 7700+ / M3</li>
+              <li><strong>CPU</strong> i7 13th gen / Ryzen 7 7700+ / M3</li>
               <li><strong>RAM</strong> 32 GB</li>
               <li><strong>GPU</strong> RTX 3050/4050 (≥ 4 GB VRAM)</li>
-              <li><strong>Disco</strong> SSD NVMe 1 TB</li>
-              <li><strong>Ecrã</strong> 1440p / 4K</li>
+              <li><strong>Disk</strong> SSD NVMe 1 TB</li>
+              <li><strong>Display</strong> 1440p / 4K</li>
             </ul>
-            <p class="hw-tier__note">
-              Iteração intensiva com ambas as apps abertas.
+            <p class="hw-tier__note" data-i18n="hw-dna-ideal-note">
+              Intensive iteration with both apps open.
             </p>
           </div>
         </div>
@@ -305,28 +319,101 @@
 
       <div class="hw-callout">
         <div class="hw-callout__icon">💡</div>
-        <div>
-          <strong>RAM é o factor mais sensível.</strong> Ambas as aplicações
-          consomem facilmente 2–4 GB sozinhas em sessões de trabalho. 16 GB é
-          o ponto onde deixas de ter swap.
+        <div data-i18n="hw-callout">
+          <strong>RAM is the most sensitive factor.</strong> Both apps easily
+          use 2–4 GB on their own during work sessions. 16 GB is where you
+          stop swapping.
         </div>
       </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section section--alt">
+      <div class="section__header">
+        <span class="eyebrow" data-i18n="price-eyebrow">Pricing</span>
+        <h2 data-i18n="price-h2">One purchase. Both apps. Yours.</h2>
+        <p class="lead" data-i18n="price-lead">
+          No subscription. Lifetime licence. All tiers include KaiaMalha and
+          KaiaDNA.
+        </p>
+      </div>
+
+      <div class="price-grid">
+        <article class="price-card price-card--personal">
+          <div class="price-card__head">
+            <span class="price-card__tier" data-i18n="price-personal-tier">Personal</span>
+            <h3 data-i18n="price-personal-h3">For learning and personal projects</h3>
+          </div>
+          <div class="price-card__amount">
+            <span class="price-card__free" data-i18n="price-free">Free</span>
+          </div>
+          <ul class="price-card__features">
+            <li data-i18n="price-personal-f1">Both apps, full features</li>
+            <li data-i18n="price-personal-f2">All export formats</li>
+            <li data-i18n="price-personal-f3">Non-commercial use only</li>
+            <li data-i18n="price-personal-f4">Community support</li>
+          </ul>
+          <a href="#downloads" class="btn btn--ghost btn--block" data-i18n="price-personal-cta">Download free</a>
+        </article>
+
+        <article class="price-card price-card--featured">
+          <span class="price-card__ribbon" data-i18n="price-popular">Most popular</span>
+          <div class="price-card__head">
+            <span class="price-card__tier" data-i18n="price-indie-tier">Indie</span>
+            <h3 data-i18n="price-indie-h3">For freelancers and solo devs</h3>
+          </div>
+          <div class="price-card__amount">
+            <span class="price-card__symbol" data-cur-symbol></span><span class="price-card__value" data-eur="99" data-usd="99">99</span>
+            <span class="price-card__suffix" data-i18n="price-once">one-time</span>
+          </div>
+          <ul class="price-card__features">
+            <li data-i18n="price-indie-f1">Everything in Personal</li>
+            <li data-i18n="price-indie-f2">1 commercial seat</li>
+            <li data-i18n="price-indie-f3">Lifetime licence</li>
+            <li data-i18n="price-indie-f4">Email support</li>
+          </ul>
+          <a href="#downloads" class="btn btn--primary btn--block" data-i18n="price-indie-cta">Buy Indie</a>
+        </article>
+
+        <article class="price-card price-card--studio">
+          <div class="price-card__head">
+            <span class="price-card__tier" data-i18n="price-studio-tier">Studio</span>
+            <h3 data-i18n="price-studio-h3">For studios and agencies</h3>
+          </div>
+          <div class="price-card__amount">
+            <span class="price-card__symbol" data-cur-symbol></span><span class="price-card__value" data-eur="399" data-usd="399">399</span>
+            <span class="price-card__suffix" data-i18n="price-once">one-time</span>
+          </div>
+          <ul class="price-card__features">
+            <li data-i18n="price-studio-f1">Everything in Indie</li>
+            <li data-i18n="price-studio-f2">Up to 5 commercial seats</li>
+            <li data-i18n="price-studio-f3">Priority support</li>
+            <li data-i18n="price-studio-f4">Early access to new features</li>
+          </ul>
+          <a href="#downloads" class="btn btn--outline btn--block" data-i18n="price-studio-cta">Buy Studio</a>
+        </article>
+      </div>
+
+      <p class="price-foot" data-i18n="price-foot">
+        <strong>Free during the v0.0 beta.</strong> Prices apply when Kaia 1.0
+        ships.
+      </p>
     </section>
 
     <!-- Downloads -->
     <section id="downloads" class="section section--alt">
       <div class="section__header">
-        <span class="eyebrow">Downloads</span>
-        <h2>Disponível para Windows, macOS e Linux.</h2>
-        <p class="lead">
-          Aplicações desktop nativas. Plataformas testadas: Windows 11 e
-          macOS (Apple Silicon).
+        <span class="eyebrow" data-i18n="dl-eyebrow">Downloads</span>
+        <h2 data-i18n="dl-h2">Available for Windows, macOS and Linux.</h2>
+        <p class="lead" data-i18n="dl-lead">
+          Native desktop apps. Tested platforms: Windows 11 and macOS
+          (Apple Silicon).
         </p>
       </div>
       <div class="dl-grid">
         <div class="dl-card">
           <h3>KaiaMalha</h3>
-          <p class="dl-card__version">v0.0 · em desenvolvimento</p>
+          <p class="dl-card__version" data-i18n="dl-version">v0.0 · in development</p>
           <div class="dl-buttons">
             <a class="btn btn--primary btn--block" href="#">Windows · .exe</a>
             <a class="btn btn--outline btn--block" href="#">macOS · .dmg</a>
@@ -335,7 +422,7 @@
         </div>
         <div class="dl-card">
           <h3>KaiaDNA</h3>
-          <p class="dl-card__version">v0.0 · em desenvolvimento</p>
+          <p class="dl-card__version" data-i18n="dl-version">v0.0 · in development</p>
           <div class="dl-buttons">
             <a class="btn btn--primary btn--block" href="#">Windows · .exe</a>
             <a class="btn btn--outline btn--block" href="#">macOS · .dmg</a>
@@ -348,46 +435,46 @@
     <!-- FAQ -->
     <section id="faq" class="section">
       <div class="section__header">
-        <span class="eyebrow">FAQ</span>
-        <h2>Perguntas frequentes.</h2>
+        <span class="eyebrow" data-i18n="faq-eyebrow">FAQ</span>
+        <h2 data-i18n="faq-h2">Frequently asked questions.</h2>
       </div>
       <div class="faq">
         <details class="faq__item">
-          <summary>Tenho que usar as duas apps?</summary>
-          <p>
-            Não. O KaiaMalha funciona com templates de prédio default e
-            consegues desenhar uma cidade inteira sem nunca abrir o KaiaDNA. O
-            KaiaDNA é para quem quer criar regras de prédios personalizadas.
+          <summary data-i18n="faq-1-q">Do I have to use both apps?</summary>
+          <p data-i18n="faq-1-a">
+            No. KaiaMalha ships with default building templates and you can
+            draw an entire city without ever opening KaiaDNA. KaiaDNA is for
+            those who want to author custom building rules.
           </p>
         </details>
         <details class="faq__item">
-          <summary>Que formatos de export estão suportados?</summary>
-          <p>
-            KaiaMalha exporta num formato universal aceite por Blender,
-            Unreal Engine e Maya. Materiais e geometria são preservados.
+          <summary data-i18n="faq-2-q">Which export formats are supported?</summary>
+          <p data-i18n="faq-2-a">
+            KaiaMalha exports in a universal format accepted by Blender,
+            Unreal Engine and Maya. Materials and geometry are preserved.
           </p>
         </details>
         <details class="faq__item">
-          <summary>Posso correr em GPU integrada?</summary>
-          <p>
-            Sim. Intel Iris Xe, AMD Radeon 680M e Apple Silicon (M1/M2/M3)
-            correm muito bem o KaiaDNA e cenas pequenas do KaiaMalha. Para
-            cidades grandes recomenda-se GPU dedicada.
+          <summary data-i18n="faq-3-q">Can I run on integrated GPU?</summary>
+          <p data-i18n="faq-3-a">
+            Yes. Intel Iris Xe, AMD Radeon 680M and Apple Silicon (M1/M2/M3)
+            handle KaiaDNA and small KaiaMalha scenes well. A discrete GPU
+            is recommended for large cities.
           </p>
         </details>
         <details class="faq__item">
-          <summary>O ficheiro de export está enorme. O que faço?</summary>
-          <p>
-            Reduz a densidade de árvores no Inspector → 3D View
-            (Trees: Sparse ou Off). Também podes desactivar a opção de
-            semáforos se não precisares.
+          <summary data-i18n="faq-4-q">My export file is huge. What do I do?</summary>
+          <p data-i18n="faq-4-a">
+            Reduce tree density in Inspector → 3D View (Trees: Sparse or
+            Off). You can also disable the traffic-lights option if you
+            don't need it.
           </p>
         </details>
         <details class="faq__item">
-          <summary>Há suporte para Linux?</summary>
-          <p>
-            Tecnicamente sim, mas ainda não validámos oficialmente. Reports
-            de bugs em Linux são bem-vindos.
+          <summary data-i18n="faq-5-q">Is Linux supported?</summary>
+          <p data-i18n="faq-5-a">
+            Technically yes, but it's not officially validated yet. Linux
+            bug reports are welcome.
           </p>
         </details>
       </div>
@@ -400,9 +487,9 @@
           <img src="assets/kaia-ico.svg" alt="" class="logo-mark logo-mark--img" aria-hidden="true" />
           <span>Kaia</span>
         </div>
-        <p>Ferramentas para desenhar, parametrizar e gerar cidades procedurais.</p>
-        <div class="footer__meta">
-          © 2026 · Kaia Project · Todos os direitos reservados
+        <p data-i18n="footer-desc">Tools to sketch, parametrise and generate procedural cities.</p>
+        <div class="footer__meta" data-i18n="footer-meta">
+          © 2026 · Kaia Project · All rights reserved
         </div>
       </div>
     </footer>
