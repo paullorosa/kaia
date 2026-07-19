@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaia — Tools for Procedural Cities</title>
+    <title>Kaia — Procedural Cities, one app</title>
     <meta
       name="description"
-      content="Kaia is the toolkit to sketch, parametrise and generate procedural cities. KaiaMalha for the city, KaiaDNA for the buildings."
+      content="KaiaGen is one desktop app to sketch, generate and populate procedural cities: a 2D→3D base, a Schema workbench for zonings and buildings, AI over MCP, and a Blender add-on for your own assets."
     />
     <link rel="icon" type="image/svg+xml" href="assets/kaia-ico.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,6 +14,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
+    />
+    <!-- Font Awesome (mesmo pacote do CityMap: @fortawesome/fontawesome-free@7) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -26,7 +31,7 @@
           <span class="logo-text">Kaia</span>
         </a>
         <ul class="nav__links">
-          <li><a href="#apps" data-i18n="nav-apps">Apps</a></li>
+          <li><a href="#apps" data-i18n="nav-apps">KaiaGen</a></li>
           <li><a href="#features" data-i18n="nav-features">Features</a></li>
           <li><a href="#hardware" data-i18n="nav-hardware">Hardware</a></li>
           <li><a href="#pricing" data-i18n="nav-pricing">Pricing</a></li>
@@ -34,7 +39,8 @@
           <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
         </ul>
         <div class="nav__toggles">
-          <button id="cur-toggle" class="pill-toggle" type="button" aria-label="Switch currency">
+          <!-- Toggle de moeda escondido enquanto os preços estão ocultos (pré-lançamento) -->
+          <button id="cur-toggle" class="pill-toggle" type="button" aria-label="Switch currency" hidden>
             <span class="cur-eur">€</span>
             <span class="pill-sep">/</span>
             <span class="cur-usd">$</span>
@@ -53,21 +59,22 @@
     <header class="hero">
       <div class="hero__inner">
         <div class="hero__copy">
-          <span class="eyebrow" data-i18n="hero-eyebrow">Procedural cities · 2D → 3D</span>
+          <span class="eyebrow" data-i18n="hero-eyebrow">Procedural cities · 2D → 3D · AI</span>
           <h1 data-i18n="hero-h1">
             Sketch the city.<br />
-            Parametrise the buildings.<br />
+            Populate the buildings.<br />
             <span class="gradient-text">Generate the world.</span>
           </h1>
           <p class="hero__lead" data-i18n="hero-lead">
-            Kaia is an ecosystem of two desktop tools that work together:
-            <strong>KaiaMalha</strong> to shape the city,
-            <strong>KaiaDNA</strong> to define the rules of the buildings that
-            fill it.
+            <strong>KaiaGen</strong> is one desktop app for procedural cities:
+            sketch in 2D and generate in 3D, define zonings and buildings in the
+            <strong>Schema</strong> workbench, drive it all with AI over
+            <strong>MCP</strong>, and bring your own assets with the
+            <strong>Blender add-on</strong>.
           </p>
           <div class="hero__cta">
             <a href="#downloads" class="btn btn--primary" data-i18n="hero-cta-start">Get started</a>
-            <a href="#apps" class="btn btn--ghost" data-i18n="hero-cta-apps">See the apps →</a>
+            <a href="#apps" class="btn btn--ghost" data-i18n="hero-cta-apps">What's inside →</a>
           </div>
           <div class="hero__meta">
             <span>Windows</span>
@@ -82,57 +89,62 @@
             <div class="grid-stack__layer layer--blocks"></div>
             <div class="grid-stack__layer layer--roads"></div>
             <div class="grid-stack__layer layer--trees"></div>
-            <div class="grid-stack__label">Maputo · proc. gen v1</div>
+            <div class="grid-stack__label">procedural gen · v1</div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Apps section -->
+    <!-- Inside KaiaGen -->
     <section id="apps" class="section">
       <div class="section__header">
-        <span class="eyebrow" data-i18n="apps-eyebrow">Two apps · one pipeline</span>
-        <h2 data-i18n="apps-h2">City and buildings, split by design.</h2>
+        <span class="eyebrow" data-i18n="apps-eyebrow">One app · one pipeline</span>
+        <h2 data-i18n="apps-h2">Everything in KaiaGen.</h2>
         <p class="lead" data-i18n="apps-lead">
-          Each app does one thing and does it well. They work together, but
-          can also be used independently.
+          KaiaMalha and KaiaDNA are now one tool. The city grid became the
+          <strong>Base</strong> of KaiaGen; the old DNA became the
+          <strong>Schema</strong>. Two modes, one app.
         </p>
       </div>
       <div class="apps-grid">
         <article class="app-card app-card--malha">
-          <img src="assets/kaia-malha.svg" alt="KaiaMalha" class="app-card__brand" />
-          <h3 class="visually-hidden">KaiaMalha</h3>
-          <p class="app-card__tag" data-i18n="malha-tag">2D editor → 3D city</p>
-          <p data-i18n="malha-desc">
-            Sketch the city layout in 2D — streets, blocks, zones — and
-            KaiaMalha extrudes everything in 3D with terrain, sidewalks,
-            urban drainage and trees.
+          <div class="app-card__head">
+            <img src="assets/kaia-logo.svg" alt="" class="app-card__logo" aria-hidden="true" />
+            <h3>KaiaGen <span class="app-card__mode">Base</span></h3>
+          </div>
+          <p class="app-card__tag" data-i18n="base-tag">2D sketch → 3D city</p>
+          <p data-i18n="base-desc">
+            The foundation of KaiaGen. Sketch the city layout in 2D — streets,
+            blocks, zones, water — and the Base generates it in 3D with terrain,
+            sidewalks, urban drainage, lighting and trees.
           </p>
           <ul class="app-card__features">
-            <li data-i18n="malha-f1">2D editor with snap-to-grid + spline</li>
-            <li data-i18n="malha-f2">Realistic 3D generation with automatic optimisation</li>
-            <li data-i18n="malha-f3">Universal export to Blender, Unreal and Maya</li>
-            <li data-i18n="malha-f4">Automatic terrain adaptation</li>
+            <li data-i18n="base-f1">2D editor with snap-to-grid + splines</li>
+            <li data-i18n="base-f2">Realistic 3D generation with auto-optimisation</li>
+            <li data-i18n="base-f3">Terrain, drainage, bridges, tunnels and viaducts</li>
+            <li data-i18n="base-f4">Universal export to Blender, Unreal and USD</li>
           </ul>
-          <a href="#downloads" class="link-arrow" data-i18n="malha-cta">Download KaiaMalha →</a>
+          <a href="#downloads" class="link-arrow" data-i18n="base-cta">Get KaiaGen →</a>
         </article>
 
         <article class="app-card app-card--dna">
-          <img src="assets/kaia-dna.svg" alt="KaiaDNA" class="app-card__brand" />
-          <h3 class="visually-hidden">KaiaDNA</h3>
-          <p class="app-card__tag" data-i18n="dna-tag">Building rules</p>
-          <p data-i18n="dna-desc">
-            Define the geometry, parameters and validation rules for the
-            buildings that populate the city. One building at a time, with
-            inspector, asset manager and reference renderer.
+          <div class="app-card__head">
+            <img src="assets/kaia-logo.svg" alt="" class="app-card__logo" aria-hidden="true" />
+            <h3>KaiaGen <span class="app-card__mode">Schema</span></h3>
+          </div>
+          <p class="app-card__tag" data-i18n="schema-tag">Zonings + buildings</p>
+          <p data-i18n="schema-desc">
+            The workbench that replaced KaiaDNA. Create custom zonings, import
+            your own building GLBs, set floors and rules, and apply them to the
+            city — all inside KaiaGen, no coding.
           </p>
           <ul class="app-card__features">
-            <li data-i18n="dna-f1">Rule editor with validation</li>
-            <li data-i18n="dna-f2">Building inspector + asset manager</li>
-            <li data-i18n="dna-f3">Reference renderer (3D preview)</li>
-            <li data-i18n="dna-f4">Templates shareable with KaiaMalha</li>
+            <li data-i18n="schema-f1">Data-driven zonings (create your own)</li>
+            <li data-i18n="schema-f2">Import multi-floor building GLBs + sidecars</li>
+            <li data-i18n="schema-f3">Asset gallery, preview and lint</li>
+            <li data-i18n="schema-f4">Zonings flow to the 2D editor live</li>
           </ul>
-          <a href="#downloads" class="link-arrow" data-i18n="dna-cta">Download KaiaDNA →</a>
+          <a href="#downloads" class="link-arrow" data-i18n="schema-cta">Get KaiaGen →</a>
         </article>
       </div>
     </section>
@@ -145,7 +157,7 @@
       </div>
       <div class="features-grid">
         <div class="feature">
-          <div class="feature__icon">2D</div>
+          <div class="feature__icon"><i class="fa-solid fa-pen-ruler"></i></div>
           <h3 data-i18n="feat-1-title">Structured 2D editor</h3>
           <p data-i18n="feat-1-desc">
             Draw streets and blocks with snap-to-grid, fillets and precise
@@ -154,7 +166,7 @@
           </p>
         </div>
         <div class="feature">
-          <div class="feature__icon">3D</div>
+          <div class="feature__icon"><i class="fa-solid fa-cube"></i></div>
           <h3 data-i18n="feat-2-title">Real-time 3D render</h3>
           <p data-i18n="feat-2-desc">
             Realistic materials, soft shadows and full city scenes at 60 FPS
@@ -163,36 +175,38 @@
           </p>
         </div>
         <div class="feature">
-          <div class="feature__icon">⛰️</div>
+          <div class="feature__icon"><i class="fa-solid fa-mountain"></i></div>
           <h3 data-i18n="feat-3-title">Terrain + drainage</h3>
           <p data-i18n="feat-3-desc">
-            Real terrain, streets that conform to relief, profiles with side
-            channels. The city adapts to the terrain, not the other way
-            around.
+            Real terrain, streets that conform to relief, side channels,
+            bridges and tunnels. The city adapts to the terrain, not the other
+            way around.
           </p>
         </div>
         <div class="feature">
-          <div class="feature__icon">USD</div>
+          <div class="feature__icon"><i class="fa-solid fa-file-export"></i></div>
           <h3 data-i18n="feat-4-title">Universal export</h3>
           <p data-i18n="feat-4-desc">
-            Export to Blender, Unreal Engine and Maya in an industry-standard
-            format. Materials and geometry preserved.
+            Export to Blender, Unreal Engine and USD (Twinmotion / Omniverse)
+            in industry-standard formats. Materials and geometry preserved.
           </p>
         </div>
         <div class="feature">
-          <div class="feature__icon">⚙️</div>
-          <h3 data-i18n="feat-5-title">Dynamic configuration</h3>
+          <div class="feature__icon"><i class="fa-solid fa-robot"></i></div>
+          <h3 data-i18n="feat-5-title">AI over MCP</h3>
           <p data-i18n="feat-5-desc">
-            3D sliders in settings to tune tree density, traffic lights,
-            drainage. Live tweaking with no rebuild.
+            Connect an AI assistant like Claude through the built-in MCP server
+            and build cities in natural language — "add an avenue, a park and a
+            river" — straight into the editor.
           </p>
         </div>
         <div class="feature">
-          <div class="feature__icon">🧬</div>
-          <h3 data-i18n="feat-6-title">Shared DNA</h3>
+          <div class="feature__icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+          <h3 data-i18n="feat-6-title">Blender add-on</h3>
           <p data-i18n="feat-6-desc">
-            Building templates created in KaiaDNA load directly in KaiaMalha.
-            A single source of truth for the rules.
+            Model your own buildings and props in Blender and export GLB +
+            sidecar with the KaiaGen add-on. They drop straight into the Schema
+            asset library.
           </p>
         </div>
       </div>
@@ -204,30 +218,16 @@
         <span class="eyebrow" data-i18n="hw-eyebrow">Hardware requirements</span>
         <h2 data-i18n="hw-h2">What PC do you need?</h2>
         <p class="lead" data-i18n="hw-lead">
-          Three tiers per app. If you use both, size for KaiaMalha — it's
-          the limiter.
+          Three tiers for KaiaGen. The 3D city generation is the limiter —
+          size for it.
         </p>
       </div>
 
-      <div class="hw-tabs" role="tablist">
-        <button
-          class="hw-tab is-active"
-          role="tab"
-          data-target="hw-malha"
-          aria-selected="true"
-        >
-          KaiaMalha
-        </button>
-        <button class="hw-tab" role="tab" data-target="hw-dna" aria-selected="false">
-          KaiaDNA
-        </button>
-      </div>
-
-      <div id="hw-malha" class="hw-panel is-active" role="tabpanel">
+      <div class="hw-panel is-active" role="tabpanel">
         <div class="hw-tiers">
           <div class="hw-tier hw-tier--min">
             <div class="hw-tier__badge" data-i18n="tier-min">Minimum</div>
-            <h3 data-i18n="hw-malha-min-h3">Works, but you'll feel it</h3>
+            <h3 data-i18n="hw-min-h3">Works, but you'll feel it</h3>
             <ul>
               <li><strong>CPU</strong> Intel i5 8th gen / Ryzen 5 2600</li>
               <li><strong>RAM</strong> 8 GB DDR4</li>
@@ -235,13 +235,13 @@
               <li><strong>Disk</strong> SSD 256 GB</li>
               <li><strong>Display</strong> 1080p</li>
             </ul>
-            <p class="hw-tier__note" data-i18n="hw-malha-min-note">
+            <p class="hw-tier__note" data-i18n="hw-min-note">
               Scenes with <code>Trees: dense</code> cause FPS drops.
             </p>
           </div>
           <div class="hw-tier hw-tier--rec">
             <div class="hw-tier__badge" data-i18n="tier-rec">Recommended</div>
-            <h3 data-i18n="hw-malha-rec-h3">Smooth experience</h3>
+            <h3 data-i18n="hw-rec-h3">Smooth experience</h3>
             <ul>
               <li><strong>CPU</strong> Intel i7 12th gen / Ryzen 7 5700X / M2</li>
               <li><strong>RAM</strong> 16 GB DDR4/DDR5</li>
@@ -249,13 +249,13 @@
               <li><strong>Disk</strong> SSD NVMe 512 GB</li>
               <li><strong>Display</strong> 1440p or dual-monitor</li>
             </ul>
-            <p class="hw-tier__note" data-i18n="hw-malha-rec-note">
+            <p class="hw-tier__note" data-i18n="hw-rec-note">
               Sweet spot: no more swap, fluid viewport.
             </p>
           </div>
           <div class="hw-tier hw-tier--ideal">
             <div class="hw-tier__badge" data-i18n="tier-ideal">Ideal</div>
-            <h3 data-i18n="hw-malha-ideal-h3">Maputo full-detail</h3>
+            <h3 data-i18n="hw-ideal-h3">Full detail, no compromises</h3>
             <ul>
               <li><strong>CPU</strong> i7/i9 13th-14th gen, Ryzen 7/9 7000, M3 Pro/Max</li>
               <li><strong>RAM</strong> 32 GB</li>
@@ -263,66 +263,19 @@
               <li><strong>Disk</strong> SSD NVMe 1 TB</li>
               <li><strong>Display</strong> 1440p / 4K</li>
             </ul>
-            <p class="hw-tier__note" data-i18n="hw-malha-ideal-note">
+            <p class="hw-tier__note" data-i18n="hw-ideal-note">
               Large cities, dense forest, no compromises.
             </p>
           </div>
         </div>
       </div>
 
-      <div id="hw-dna" class="hw-panel" role="tabpanel">
-        <div class="hw-tiers">
-          <div class="hw-tier hw-tier--min">
-            <div class="hw-tier__badge" data-i18n="tier-min">Minimum</div>
-            <h3 data-i18n="hw-dna-min-h3">Simple templates</h3>
-            <ul>
-              <li><strong>CPU</strong> Intel i3 10th gen / Ryzen 3 3200</li>
-              <li><strong>RAM</strong> 8 GB DDR4</li>
-              <li><strong>GPU</strong> UHD 620+ / Vega 3+ / Apple M1</li>
-              <li><strong>Disk</strong> SSD 256 GB</li>
-              <li><strong>Display</strong> 1080p</li>
-            </ul>
-            <p class="hw-tier__note" data-i18n="hw-dna-min-note">
-              Validate and preview existing templates.
-            </p>
-          </div>
-          <div class="hw-tier hw-tier--rec">
-            <div class="hw-tier__badge" data-i18n="tier-rec">Recommended</div>
-            <h3 data-i18n="hw-dna-rec-h3">Daily work</h3>
-            <ul>
-              <li><strong>CPU</strong> Intel i5 12th gen / Ryzen 5 5600 / M2</li>
-              <li><strong>RAM</strong> 16 GB DDR4/DDR5</li>
-              <li><strong>GPU</strong> Modern integrated (Iris Xe / 680M)</li>
-              <li><strong>Disk</strong> SSD NVMe 512 GB</li>
-              <li><strong>Display</strong> 1440p or dual-monitor</li>
-            </ul>
-            <p class="hw-tier__note" data-i18n="hw-dna-rec-note">
-              Edit rules + asset manager open without friction.
-            </p>
-          </div>
-          <div class="hw-tier hw-tier--ideal">
-            <div class="hw-tier__badge" data-i18n="tier-ideal">Ideal</div>
-            <h3 data-i18n="hw-dna-ideal-h3">Large library</h3>
-            <ul>
-              <li><strong>CPU</strong> i7 13th gen / Ryzen 7 7700+ / M3</li>
-              <li><strong>RAM</strong> 32 GB</li>
-              <li><strong>GPU</strong> RTX 3050/4050 (≥ 4 GB VRAM)</li>
-              <li><strong>Disk</strong> SSD NVMe 1 TB</li>
-              <li><strong>Display</strong> 1440p / 4K</li>
-            </ul>
-            <p class="hw-tier__note" data-i18n="hw-dna-ideal-note">
-              Intensive iteration with both apps open.
-            </p>
-          </div>
-        </div>
-      </div>
-
       <div class="hw-callout">
-        <div class="hw-callout__icon">💡</div>
+        <div class="hw-callout__icon"><i class="fa-solid fa-lightbulb"></i></div>
         <div data-i18n="hw-callout">
-          <strong>RAM is the most sensitive factor.</strong> Both apps easily
-          use 2–4 GB on their own during work sessions. 16 GB is where you
-          stop swapping.
+          <strong>RAM is the most sensitive factor.</strong> KaiaGen easily
+          uses 2–4 GB during work sessions, more on large cities. 16 GB is
+          where you stop swapping.
         </div>
       </div>
     </section>
@@ -331,13 +284,16 @@
     <section id="pricing" class="section section--alt">
       <div class="section__header">
         <span class="eyebrow" data-i18n="price-eyebrow">Pricing</span>
-        <h2 data-i18n="price-h2">One purchase. Both apps. Yours.</h2>
+        <h2 data-i18n="price-h2">Coming soon.</h2>
         <p class="lead" data-i18n="price-lead">
-          No subscription. Lifetime licence. All tiers include KaiaMalha and
-          KaiaDNA.
+          KaiaGen isn't launched yet. Pricing will be announced at launch —
+          free to try during the beta.
         </p>
       </div>
 
+      <!-- Precos escondidos ate ao lancamento (app ainda nao lancada, 2026-07-20).
+           Para os repor: remover este comentario e o fecho de comentario a seguir ao grid. -->
+      <!--
       <div class="price-grid">
         <article class="price-card price-card--personal">
           <div class="price-card__head">
@@ -348,8 +304,8 @@
             <span class="price-card__free" data-i18n="price-free">Free</span>
           </div>
           <ul class="price-card__features">
-            <li data-i18n="price-personal-f1">Both apps, full features</li>
-            <li data-i18n="price-personal-f2">All export formats</li>
+            <li data-i18n="price-personal-f1">Full KaiaGen, all features</li>
+            <li data-i18n="price-personal-f2">All export formats (incl. USD)</li>
             <li data-i18n="price-personal-f3">Non-commercial use only</li>
             <li data-i18n="price-personal-f4">Community support</li>
           </ul>
@@ -393,11 +349,16 @@
           <a href="#downloads" class="btn btn--outline btn--block" data-i18n="price-studio-cta">Buy Studio</a>
         </article>
       </div>
+      -->
 
-      <p class="price-foot" data-i18n="price-foot">
-        <strong>Free during the v0.0 beta.</strong> Prices apply when Kaia 1.0
-        ships.
-      </p>
+      <div class="soon-card">
+        <div class="soon-card__icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3 data-i18n="soon-title">Not launched yet</h3>
+        <p data-i18n="soon-desc">
+          We're putting the finishing touches on KaiaGen. Pricing lands at
+          launch — the beta is free to try.
+        </p>
+      </div>
     </section>
 
     <!-- Downloads -->
@@ -406,13 +367,13 @@
         <span class="eyebrow" data-i18n="dl-eyebrow">Downloads</span>
         <h2 data-i18n="dl-h2">Available for Windows, macOS and Linux.</h2>
         <p class="lead" data-i18n="dl-lead">
-          Native desktop apps. Tested platforms: Windows 11 and macOS
+          Native desktop app. Tested platforms: Windows 11 and macOS
           (Apple Silicon).
         </p>
       </div>
       <div class="dl-grid">
         <div class="dl-card">
-          <h3>KaiaMalha</h3>
+          <h3>KaiaGen</h3>
           <p class="dl-card__version" data-i18n="dl-version">v0.0 · in development</p>
           <div class="dl-buttons">
             <a class="btn btn--primary btn--block" href="#">Windows · .exe</a>
@@ -421,12 +382,11 @@
           </div>
         </div>
         <div class="dl-card">
-          <h3>KaiaDNA</h3>
-          <p class="dl-card__version" data-i18n="dl-version">v0.0 · in development</p>
+          <h3 data-i18n="dl-addon-h3">Blender add-on</h3>
+          <p class="dl-card__version" data-i18n="dl-addon-version">Blender 4.x · GLB + sidecar</p>
           <div class="dl-buttons">
-            <a class="btn btn--primary btn--block" href="#">Windows · .exe</a>
-            <a class="btn btn--outline btn--block" href="#">macOS · .dmg</a>
-            <a class="btn btn--outline btn--block" href="#">Linux · .AppImage</a>
+            <a class="btn btn--primary btn--block" data-i18n="dl-addon-btn" href="#">Download add-on · .py</a>
+            <a class="btn btn--outline btn--block" data-i18n="dl-addon-docs" href="#">How it works →</a>
           </div>
         </div>
       </div>
@@ -440,34 +400,53 @@
       </div>
       <div class="faq">
         <details class="faq__item">
-          <summary data-i18n="faq-1-q">Do I have to use both apps?</summary>
+          <summary data-i18n="faq-1-q">What's the difference between Base and Schema?</summary>
           <p data-i18n="faq-1-a">
-            No. KaiaMalha ships with default building templates and you can
-            draw an entire city without ever opening KaiaDNA. KaiaDNA is for
-            those who want to author custom building rules.
+            Both live in the same app, KaiaGen. The Base is the city itself —
+            sketch in 2D, generate in 3D. Schema is where you create zonings and
+            import your own buildings. You can draw a whole city in the Base
+            without ever opening Schema.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq-6-q">How does the AI / MCP work?</summary>
+          <p data-i18n="faq-6-a">
+            KaiaGen ships with an MCP server. Connect an assistant like Claude
+            and describe what you want — roads, zones, POIs, water — and it
+            builds straight into the 2D editor, which then generates in 3D. You
+            stay in control and can edit everything by hand.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq-7-q">How do I add my own buildings?</summary>
+          <p data-i18n="faq-7-a">
+            Model them in Blender and export with the KaiaGen add-on — it writes
+            the GLB plus a sidecar file describing floors and rules. Import it in
+            Schema and it becomes available to your zonings. No coding.
           </p>
         </details>
         <details class="faq__item">
           <summary data-i18n="faq-2-q">Which export formats are supported?</summary>
           <p data-i18n="faq-2-a">
-            KaiaMalha exports in a universal format accepted by Blender,
-            Unreal Engine and Maya. Materials and geometry are preserved.
+            KaiaGen exports GLB (metres or centimetres) and USD, accepted by
+            Blender, Unreal Engine, Twinmotion and Omniverse. Materials and
+            geometry are preserved.
           </p>
         </details>
         <details class="faq__item">
           <summary data-i18n="faq-3-q">Can I run on integrated GPU?</summary>
           <p data-i18n="faq-3-a">
             Yes. Intel Iris Xe, AMD Radeon 680M and Apple Silicon (M1/M2/M3)
-            handle KaiaDNA and small KaiaMalha scenes well. A discrete GPU
-            is recommended for large cities.
+            handle Schema and small cities well. A discrete GPU is recommended
+            for large cities.
           </p>
         </details>
         <details class="faq__item">
           <summary data-i18n="faq-4-q">My export file is huge. What do I do?</summary>
           <p data-i18n="faq-4-a">
-            Reduce tree density in Inspector → 3D View (Trees: Sparse or
-            Off). You can also disable the traffic-lights option if you
-            don't need it.
+            Reduce tree density in the placement settings (Trees: sparse or
+            off). You can also disable power cables or traffic lights if you
+            don't need them.
           </p>
         </details>
         <details class="faq__item">
@@ -487,7 +466,7 @@
           <img src="assets/kaia-ico.svg" alt="" class="logo-mark logo-mark--img" aria-hidden="true" />
           <span>Kaia</span>
         </div>
-        <p data-i18n="footer-desc">Tools to sketch, parametrise and generate procedural cities.</p>
+        <p data-i18n="footer-desc">One app to sketch, generate and populate procedural cities.</p>
         <div class="footer__meta" data-i18n="footer-meta">
           © 2026 · Kaia Project · All rights reserved
         </div>
