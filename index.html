@@ -365,28 +365,26 @@
     <section id="downloads" class="section section--alt">
       <div class="section__header">
         <span class="eyebrow" data-i18n="dl-eyebrow">Downloads</span>
-        <h2 data-i18n="dl-h2">Available for Windows, macOS and Linux.</h2>
+        <h2 data-i18n="dl-h2">Windows, to start with.</h2>
         <p class="lead" data-i18n="dl-lead">
-          Native desktop app. Tested platforms: Windows 11 and macOS
-          (Apple Silicon).
+          Native desktop app for Windows 11 (64-bit), no install needed — unzip
+          and run. Not released yet. macOS and Linux are not part of the first
+          version.
         </p>
       </div>
       <div class="dl-grid">
         <div class="dl-card">
           <h3>KaiaGen</h3>
-          <p class="dl-card__version" data-i18n="dl-version">v0.0 · in development</p>
+          <p class="dl-card__version" data-i18n="dl-version">Windows 11 · 64-bit · portable</p>
           <div class="dl-buttons">
-            <a class="btn btn--primary btn--block" href="#">Windows · .exe</a>
-            <a class="btn btn--outline btn--block" href="#">macOS · .dmg</a>
-            <a class="btn btn--outline btn--block" href="#">Linux · .AppImage</a>
+            <span class="btn btn--outline btn--block btn--soon" aria-disabled="true" data-i18n="dl-soon">Coming soon</span>
           </div>
         </div>
         <div class="dl-card">
           <h3 data-i18n="dl-addon-h3">Blender add-on</h3>
           <p class="dl-card__version" data-i18n="dl-addon-version">Blender 4.x · GLB + sidecar</p>
           <div class="dl-buttons">
-            <a class="btn btn--primary btn--block" data-i18n="dl-addon-btn" href="#">Download add-on · .py</a>
-            <a class="btn btn--outline btn--block" data-i18n="dl-addon-docs" href="#">How it works →</a>
+            <span class="btn btn--outline btn--block btn--soon" aria-disabled="true" data-i18n="dl-soon">Coming soon</span>
           </div>
         </div>
       </div>
@@ -442,18 +440,38 @@
           </p>
         </details>
         <details class="faq__item">
-          <summary data-i18n="faq-4-q">My export file is huge. What do I do?</summary>
-          <p data-i18n="faq-4-a">
-            Reduce tree density in the placement settings (Trees: sparse or
-            off). You can also disable power cables or traffic lights if you
-            don't need them.
+          <summary data-i18n="faq-8-q">How big a city can it generate?</summary>
+          <p data-i18n="faq-8-a">
+            Measured: up to about 60 streets (a neighbourhood, ~360 m) generates
+            in roughly 7 seconds — that's the size you iterate on. 100–250
+            streets takes tens of seconds. Above 250 streets is not recommended
+            in the first version: split the city into district projects. Real
+            threading and automatic tiling come after launch.
           </p>
         </details>
         <details class="faq__item">
-          <summary data-i18n="faq-5-q">Is Linux supported?</summary>
+          <summary data-i18n="faq-4-q">My export file is huge. What do I do?</summary>
+          <p data-i18n="faq-4-a">
+            Expect around 150 MB for a small city: textures are embedded in the
+            GLB so it opens anywhere without missing files. Export by category
+            (one GLB per generator) and import only what you need, and reduce
+            tree density in the placement settings (Trees: sparse or off).
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq-9-q">Can I use the generated cities in a commercial game?</summary>
+          <p data-i18n="faq-9-a">
+            Yes. Use the generated cities and the bundled assets in any product
+            of yours, commercial or not, with no royalties and no attribution
+            required. The one thing you can't do is resell the assets themselves
+            as an asset pack. Full text: <a href="legal.html">licences</a>.
+          </p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq-5-q">Is there macOS or Linux support?</summary>
           <p data-i18n="faq-5-a">
-            Technically yes, but it's not officially validated yet. Linux
-            bug reports are welcome.
+            Not in the first version — it's Windows 11 (64-bit) only. Both are
+            technically possible and are on the list for after launch.
           </p>
         </details>
       </div>
@@ -467,8 +485,12 @@
           <span>Kaia</span>
         </div>
         <p data-i18n="footer-desc">One app to sketch, generate and populate procedural cities.</p>
+        <nav class="footer__links">
+          <a href="legal.html#assets" data-i18n="footer-asset-licence">Asset licence</a>
+          <a href="legal.html#eula" data-i18n="footer-eula">Application licence (EULA)</a>
+        </nav>
         <div class="footer__meta" data-i18n="footer-meta">
-          © 2026 · Kaia Project · All rights reserved
+          © 2026 · Kaia · All rights reserved
         </div>
       </div>
     </footer>
